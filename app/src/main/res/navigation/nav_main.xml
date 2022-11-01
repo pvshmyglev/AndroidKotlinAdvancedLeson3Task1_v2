@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_main_fragment">
+
+    <fragment
+        android:id="@+id/nav_main_fragment"
+        android:name="ru.netology.nmedia.activity.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_fragment_to_edit_post_fragment"
+            app:destination="@id/nav_edit_post_fragment" />
+        <action
+            android:id="@+id/action_nav_main_fragment_to_alone_post_fragment"
+            app:destination="@id/nav_alone_post_fragment" />
+        <action
+            android:id="@+id/action_nav_main_fragment_to_attachment_alone_fragment"
+            app:destination="@id/nav_attachment_alone_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_edit_post_fragment"
+        android:name="ru.netology.nmedia.activity.EditPostFragment"
+        android:label="fragment_edit_post"
+        tools:layout="@layout/fragment_edit_post" >
+        <argument
+            android:name="currentContent"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_alone_post_fragment"
+        android:name="ru.netology.nmedia.activity.AlonePostFragment"
+        android:label="fragment_alone_post"
+        tools:layout="@layout/fragment_alone_post" >
+        <action
+            android:id="@+id/action_nav_alone_post_fragment_to_nav_edit_post_fragment"
+            app:destination="@id/nav_edit_post_fragment" />
+        <action
+            android:id="@+id/action_nav_alone_post_fragment_to_nav_main_fragment"
+            app:destination="@id/nav_main_fragment" />
+        <action
+            android:id="@+id/action_nav_alone_post_fragment_to_nav_attachment_alone_fragment"
+            app:destination="@id/nav_attachment_alone_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_attachment_alone_fragment"
+        android:name="ru.netology.nmedia.activity.FragmentAloneAttachment"
+        android:label="fragment_alone_attachment"
+        tools:layout="@layout/fragment_alone_attachment" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_auth_fragment"
+        android:name="ru.netology.nmedia.activity.FragmentAuth"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth">
+    </fragment>
+</navigation>

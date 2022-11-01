@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_edit_post"
+    tools:context=".activity.EditPostFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/data_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_menu"
+        >
+
+        <FrameLayout
+            android:id="@+id/preview_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/text_preview"
+                tools:src="@sample/contentPic.png" />
+
+            <Button
+                android:id="@+id/button_clear_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_clear"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="#AA0000FF"
+                />
+
+        </FrameLayout>
+
+        <EditText
+        android:id="@+id/text_new_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        android:layout_margin="@dimen/sizeMargin"
+        android:inputType="textMultiLine"
+        android:importantForAutofill="no"
+        android:background="@drawable/shape_on_edit_text"
+        android:hint="@string/textNewPost"
+        android:paddingLeft="@dimen/sizeMediumMargin"
+        android:paddingRight="@dimen/sizeMediumMargin"
+        android:paddingTop="@dimen/sizeMediumMargin"
+        android:paddingBottom="@dimen/sizeMediumMargin"
+        />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/sizeMargin"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+     >
+
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/button_new_post_insert_file"
+         app:icon="@drawable/ic_baseline_insert_photo_24"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="@style/Widget.AppTheme.IconButton"
+         />
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/button_new_post_insert_photo"
+         app:icon="@drawable/ic_baseline_photo_camera_24"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="@style/Widget.AppTheme.IconButton"
+         />
+
+ </LinearLayout>
+
+ <!--
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/fab_ok"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:clickable="true"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:srcCompat="@drawable/ic_baseline_check_24"
+     android:focusable="true"
+     android:contentDescription="@string/textAdd" />
+ -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

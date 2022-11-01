@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sizeAvatar">48dp</dimen>
+    <dimen name="sizeIcon">24dp</dimen>
+    <dimen name="sizeVideo">168dp</dimen>
+    <dimen name="sizeMargin">16dp</dimen>
+    <dimen name="sizeLightMargin">4dp</dimen>
+    <dimen name="sizeMediumMargin">8dp</dimen>
+    <dimen name="sizeTextButton">12dp</dimen>
+    <dimen name="sizeTextField">48dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="icon_button_padding">12dp</dimen>
+    <dimen name="icon_button_min_size">48dp</dimen>
+</resources>

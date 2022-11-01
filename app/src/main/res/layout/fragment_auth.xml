@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/text_head_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sizeTextField"
+        android:layout_marginBottom="@dimen/sizeMargin"
+        android:layout_marginStart="@dimen/sizeMargin"
+        android:gravity="center"
+        android:text="@string/text_login"
+        app:layout_constraintBottom_toTopOf="@id/text_head_password"
+        app:layout_constraintEnd_toEndOf="@id/text_head_password"
+        app:layout_constraintHorizontal_bias="@integer/material_motion_duration_long_1"
+        app:layout_constraintStart_toStartOf="@id/text_head_password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/text_head_password"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sizeTextField"
+        android:layout_marginTop="@dimen/sizeMargin"
+        android:layout_marginStart="@dimen/sizeMargin"
+        android:gravity="center"
+        android:text="@string/text_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/field_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_head_login"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+    <EditText
+        android:id="@+id/field_login"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeTextField"
+        android:layout_margin="@dimen/sizeMargin"
+        android:background="@drawable/shape_on_edit_text"
+        android:hint="@string/text_login"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="@dimen/sizeLightMargin"
+        app:layout_constraintBottom_toTopOf="@id/field_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_head_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+    <EditText
+        android:id="@+id/field_password"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeTextField"
+        android:layout_margin="@dimen/sizeMargin"
+        android:background="@drawable/shape_on_edit_text"
+        android:hint="@string/text_password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="@dimen/sizeLightMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_head_password"
+        app:layout_constraintTop_toBottomOf="@id/field_login"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeMargin"
+        android:text="@string/text_button_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/field_password"
+        app:layout_constraintVertical_bias="0"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
